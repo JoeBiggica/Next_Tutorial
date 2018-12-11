@@ -206,95 +206,61 @@ var Layout = function Layout(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MyLayout.js */ "./components/MyLayout.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "next/link");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MyLayout.js */ "./components/MyLayout.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-
-
-
+function getPosts() {
+  return [{
+    id: 'hello-nextjs',
+    title: 'Hello Next.js'
+  }, {
+    id: 'learn-nextjs',
+    title: 'Learn Next.js is awesome'
+  }, {
+    id: 'deploy-nextjs',
+    title: 'Deploy apps with ZEIT'
+  }];
+}
 
 var PostLink = function PostLink(_ref) {
-  var show = _ref.show;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: show.id,
-    className: "jsx-3842181195"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    as: "/p/".concat(show.id),
-    href: "/post?id=".concat(show.id)
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    className: "jsx-3842181195"
-  }, show.name)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    styleId: "3842181195",
-    css: "li.jsx-3842181195{list-style:none;margin:5px 0;}a.jsx-3842181195{-webkit-text-decoration:none;text-decoration:none;color:blue;font-family:\"Arial\";}a.jsx-3842181195:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yZXV0ZXJzL0VuZ2luZWVyaW5nL1BsYXlncm91bmQvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFTYyxBQUcwQixBQUtLLEFBTVQsWUFDZCxJQVhlLGFBQ2YscUJBSWEsV0FDUyxvQkFDdEIiLCJmaWxlIjoiL1VzZXJzL3JldXRlcnMvRW5naW5lZXJpbmcvUGxheWdyb3VuZC9oZWxsby1uZXh0L3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExheW91dCBmcm9tICcuLi9jb21wb25lbnRzL015TGF5b3V0LmpzJ1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IGZldGNoIGZyb20gJ2lzb21vcnBoaWMtdW5mZXRjaCdcblxuY29uc3QgUG9zdExpbmsgPSAoe3Nob3d9KSA9PiAoXG5cdDxsaSBrZXk9e3Nob3cuaWR9PlxuXHRcdDxMaW5rIGFzPXtgL3AvJHtzaG93LmlkfWB9IGhyZWY9e2AvcG9zdD9pZD0ke3Nob3cuaWR9YH0+XG5cdFx0XHQ8YT57c2hvdy5uYW1lfTwvYT5cblx0XHQ8L0xpbms+XG5cdFx0PHN0eWxlIGpzeD57YFxuXHQgICAgICBsaSB7XG5cdCAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcblx0ICAgICAgICBtYXJnaW46IDVweCAwO1xuXHQgICAgICB9XG5cblx0ICAgICAgYSB7XG5cdCAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuXHQgICAgICAgIGNvbG9yOiBibHVlO1xuXHQgICAgICAgIGZvbnQtZmFtaWx5OiBcIkFyaWFsXCI7XG5cdCAgICAgIH1cblxuXHQgICAgICBhOmhvdmVyIHtcblx0ICAgICAgICBvcGFjaXR5OiAwLjY7XG5cdCAgICAgIH1cblx0ICAgIGB9PC9zdHlsZT5cblx0PC9saT5cbilcbmNvbnN0IEluZGV4ID0gKHByb3BzKSA9PiAoXG4gICAgPExheW91dD5cbiAgICBcdDxoMT5CYXRtYW4gVFYgU2hvd3M8L2gxPlxuICAgIFx0PHVsPlxuICAgIFx0XHR7cHJvcHMuc2hvd3MubWFwKCh7c2hvd30pID0+IChcbiAgICBcdFx0XHQ8UG9zdExpbmsga2V5PXtzaG93LmlkfSBzaG93PXtzaG93fSAvPlxuICAgIFx0XHQpKX1cbiAgICBcdDwvdWw+XG4gICAgXHQ8c3R5bGUganN4PntgXG5cdCAgICAgIGgxLCBhIHtcblx0ICAgICAgICBmb250LWZhbWlseTogXCJBcmlhbFwiO1xuXHQgICAgICB9XG5cblx0ICAgICAgdWwge1xuXHQgICAgICAgIHBhZGRpbmc6IDA7XG5cdCAgICAgIH1cblxuXHQgICAgICBsaSB7XG5cdCAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcblx0ICAgICAgICBtYXJnaW46IDVweCAwO1xuXHQgICAgICB9XG5cblx0ICAgICAgYSB7XG5cdCAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuXHQgICAgICAgIGNvbG9yOiBibHVlO1xuXHQgICAgICB9XG5cblx0ICAgICAgYTpob3ZlciB7XG5cdCAgICAgICAgb3BhY2l0eTogMC42O1xuXHQgICAgICB9XG5cdCAgICBgfTwvc3R5bGU+XG4gICAgPC9MYXlvdXQ+XG4pXG5cbkluZGV4LmdldEluaXRpYWxQcm9wcyA9IGFzeW5jIGZ1bmN0aW9uKCkge1xuXHRjb25zdCByZXMgPSBhd2FpdCBmZXRjaCgnaHR0cHM6Ly9hcGkudHZtYXplLmNvbS9zZWFyY2gvc2hvd3M/cT1iYXRtYW4nKVxuXHRjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKVxuXG5cdGNvbnNvbGUubG9nKGBTaG93IGRhdGEgZmV0Y2hlZC4gQ291bnQ6ICR7ZGF0YS5sZW5ndGh9YClcblxuXHRyZXR1cm4ge1xuXHRcdHNob3dzOiBkYXRhXG5cdH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgSW5kZXgiXX0= */\n/*@ sourceURL=/Users/reuters/Engineering/Playground/hello-next/pages/index.js */"
+  var post = _ref.post;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "jsx-3950785544"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    as: "/p/".concat(post.id),
+    href: "/post?title=".concat(post.title)
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    className: "jsx-3950785544"
+  }, post.title)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    styleId: "3950785544",
+    css: "li.jsx-3950785544{list-style:none;margin:5px 0;}a.jsx-3950785544{-webkit-text-decoration:none;text-decoration:none;color:blue;font-family:\"Arial\";}a.jsx-3950785544:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yZXV0ZXJzL0VuZ2luZWVyaW5nL1BsYXlncm91bmQvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFnQmdCLEFBR3lCLEFBS0ssQUFNVCxZQUNkLElBWGUsYUFDZixxQkFJYSxXQUNTLG9CQUN0QiIsImZpbGUiOiIvVXNlcnMvcmV1dGVycy9FbmdpbmVlcmluZy9QbGF5Z3JvdW5kL2hlbGxvLW5leHQvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGF5b3V0IGZyb20gJy4uL2NvbXBvbmVudHMvTXlMYXlvdXQuanMnXG5pbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnXG5cbmZ1bmN0aW9uIGdldFBvc3RzICgpIHtcbiAgcmV0dXJuIFtcbiAgICB7IGlkOiAnaGVsbG8tbmV4dGpzJywgdGl0bGU6ICdIZWxsbyBOZXh0LmpzJ30sXG4gICAgeyBpZDogJ2xlYXJuLW5leHRqcycsIHRpdGxlOiAnTGVhcm4gTmV4dC5qcyBpcyBhd2Vzb21lJ30sXG4gICAgeyBpZDogJ2RlcGxveS1uZXh0anMnLCB0aXRsZTogJ0RlcGxveSBhcHBzIHdpdGggWkVJVCd9LFxuICBdXG59XG5cbmNvbnN0IFBvc3RMaW5rID0gKHsgcG9zdCB9KSA9PiAoXG4gIDxsaT5cbiAgICA8TGluayBhcz17YC9wLyR7cG9zdC5pZH1gfSBocmVmPXtgL3Bvc3Q/dGl0bGU9JHtwb3N0LnRpdGxlfWB9PlxuICAgICAgPGE+e3Bvc3QudGl0bGV9PC9hPlxuICAgIDwvTGluaz5cbiAgICA8c3R5bGUganN4PntgXG4gICAgICBsaSB7XG4gICAgICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG4gICAgICAgIG1hcmdpbjogNXB4IDA7XG4gICAgICB9XG5cbiAgICAgIGEge1xuICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgICAgIGNvbG9yOiBibHVlO1xuICAgICAgICBmb250LWZhbWlseTogXCJBcmlhbFwiO1xuICAgICAgfVxuXG4gICAgICBhOmhvdmVyIHtcbiAgICAgICAgb3BhY2l0eTogMC42O1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgPC9saT5cbilcblxuZXhwb3J0IGRlZmF1bHQgKCkgPT4gKFxuICA8TGF5b3V0PlxuICAgIDxoMT5NeSBCbG9nPC9oMT5cbiAgICA8dWw+XG4gICAgICB7Z2V0UG9zdHMoKS5tYXAoKHBvc3QpID0+IChcbiAgICAgICAgPFBvc3RMaW5rIGtleT17cG9zdC5pZH0gcG9zdD17cG9zdH0vPlxuICAgICAgKSl9XG4gICAgPC91bD5cbiAgICA8c3R5bGUganN4PntgXG4gICAgICBoMSwgYSB7XG4gICAgICAgIGZvbnQtZmFtaWx5OiBcIkFyaWFsXCI7XG4gICAgICB9XG5cbiAgICAgIHVsIHtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgIH1cblxuICAgICAgbGkge1xuICAgICAgICBsaXN0LXN0eWxlOiBub25lO1xuICAgICAgICBtYXJnaW46IDVweCAwO1xuICAgICAgfVxuXG4gICAgICBhIHtcbiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgICAgICBjb2xvcjogYmx1ZTtcbiAgICAgIH1cblxuICAgICAgYTpob3ZlciB7XG4gICAgICAgIG9wYWNpdHk6IDAuNjtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvTGF5b3V0PlxuKSJdfQ== */\n/*@ sourceURL=/Users/reuters/Engineering/Playground/hello-next/pages/index.js */"
   }));
 };
 
-var Index = function Index(props) {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
-    className: "jsx-18725696"
-  }, "Batman TV Shows"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "jsx-18725696"
-  }, props.shows.map(function (_ref2) {
-    var show = _ref2.show;
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(PostLink, {
-      key: show.id,
-      show: show
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_2__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+    className: "jsx-2987328901"
+  }, "My Blog"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+    className: "jsx-2987328901"
+  }, getPosts().map(function (post) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostLink, {
+      key: post.id,
+      post: post
     });
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    styleId: "18725696",
-    css: "h1.jsx-18725696,a.jsx-18725696{font-family:\"Arial\";}ul.jsx-18725696{padding:0;}li.jsx-18725696{list-style:none;margin:5px 0;}a.jsx-18725696{-webkit-text-decoration:none;text-decoration:none;color:blue;}a.jsx-18725696:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yZXV0ZXJzL0VuZ2luZWVyaW5nL1BsYXlncm91bmQvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFtQ2lCLEFBRzhCLEFBSVYsQUFJTSxBQUtLLEFBS1QsVUFiZCxFQWNBLElBVmUsSUFSZixTQVNBLHFCQUlhLFdBQ2IiLCJmaWxlIjoiL1VzZXJzL3JldXRlcnMvRW5naW5lZXJpbmcvUGxheWdyb3VuZC9oZWxsby1uZXh0L3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExheW91dCBmcm9tICcuLi9jb21wb25lbnRzL015TGF5b3V0LmpzJ1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IGZldGNoIGZyb20gJ2lzb21vcnBoaWMtdW5mZXRjaCdcblxuY29uc3QgUG9zdExpbmsgPSAoe3Nob3d9KSA9PiAoXG5cdDxsaSBrZXk9e3Nob3cuaWR9PlxuXHRcdDxMaW5rIGFzPXtgL3AvJHtzaG93LmlkfWB9IGhyZWY9e2AvcG9zdD9pZD0ke3Nob3cuaWR9YH0+XG5cdFx0XHQ8YT57c2hvdy5uYW1lfTwvYT5cblx0XHQ8L0xpbms+XG5cdFx0PHN0eWxlIGpzeD57YFxuXHQgICAgICBsaSB7XG5cdCAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcblx0ICAgICAgICBtYXJnaW46IDVweCAwO1xuXHQgICAgICB9XG5cblx0ICAgICAgYSB7XG5cdCAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuXHQgICAgICAgIGNvbG9yOiBibHVlO1xuXHQgICAgICAgIGZvbnQtZmFtaWx5OiBcIkFyaWFsXCI7XG5cdCAgICAgIH1cblxuXHQgICAgICBhOmhvdmVyIHtcblx0ICAgICAgICBvcGFjaXR5OiAwLjY7XG5cdCAgICAgIH1cblx0ICAgIGB9PC9zdHlsZT5cblx0PC9saT5cbilcbmNvbnN0IEluZGV4ID0gKHByb3BzKSA9PiAoXG4gICAgPExheW91dD5cbiAgICBcdDxoMT5CYXRtYW4gVFYgU2hvd3M8L2gxPlxuICAgIFx0PHVsPlxuICAgIFx0XHR7cHJvcHMuc2hvd3MubWFwKCh7c2hvd30pID0+IChcbiAgICBcdFx0XHQ8UG9zdExpbmsga2V5PXtzaG93LmlkfSBzaG93PXtzaG93fSAvPlxuICAgIFx0XHQpKX1cbiAgICBcdDwvdWw+XG4gICAgXHQ8c3R5bGUganN4PntgXG5cdCAgICAgIGgxLCBhIHtcblx0ICAgICAgICBmb250LWZhbWlseTogXCJBcmlhbFwiO1xuXHQgICAgICB9XG5cblx0ICAgICAgdWwge1xuXHQgICAgICAgIHBhZGRpbmc6IDA7XG5cdCAgICAgIH1cblxuXHQgICAgICBsaSB7XG5cdCAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcblx0ICAgICAgICBtYXJnaW46IDVweCAwO1xuXHQgICAgICB9XG5cblx0ICAgICAgYSB7XG5cdCAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuXHQgICAgICAgIGNvbG9yOiBibHVlO1xuXHQgICAgICB9XG5cblx0ICAgICAgYTpob3ZlciB7XG5cdCAgICAgICAgb3BhY2l0eTogMC42O1xuXHQgICAgICB9XG5cdCAgICBgfTwvc3R5bGU+XG4gICAgPC9MYXlvdXQ+XG4pXG5cbkluZGV4LmdldEluaXRpYWxQcm9wcyA9IGFzeW5jIGZ1bmN0aW9uKCkge1xuXHRjb25zdCByZXMgPSBhd2FpdCBmZXRjaCgnaHR0cHM6Ly9hcGkudHZtYXplLmNvbS9zZWFyY2gvc2hvd3M/cT1iYXRtYW4nKVxuXHRjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKVxuXG5cdGNvbnNvbGUubG9nKGBTaG93IGRhdGEgZmV0Y2hlZC4gQ291bnQ6ICR7ZGF0YS5sZW5ndGh9YClcblxuXHRyZXR1cm4ge1xuXHRcdHNob3dzOiBkYXRhXG5cdH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgSW5kZXgiXX0= */\n/*@ sourceURL=/Users/reuters/Engineering/Playground/hello-next/pages/index.js */"
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    styleId: "2987328901",
+    css: "h1.jsx-2987328901,a.jsx-2987328901{font-family:\"Arial\";}ul.jsx-2987328901{padding:0;}li.jsx-2987328901{list-style:none;margin:5px 0;}a.jsx-2987328901{-webkit-text-decoration:none;text-decoration:none;color:blue;}a.jsx-2987328901:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yZXV0ZXJzL0VuZ2luZWVyaW5nL1BsYXlncm91bmQvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUEyQ2dCLEFBRzZCLEFBSVYsQUFJTSxBQUtLLEFBS1QsVUFiZCxFQWNBLElBVmUsSUFSZixTQVNBLHFCQUlhLFdBQ2IiLCJmaWxlIjoiL1VzZXJzL3JldXRlcnMvRW5naW5lZXJpbmcvUGxheWdyb3VuZC9oZWxsby1uZXh0L3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExheW91dCBmcm9tICcuLi9jb21wb25lbnRzL015TGF5b3V0LmpzJ1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuXG5mdW5jdGlvbiBnZXRQb3N0cyAoKSB7XG4gIHJldHVybiBbXG4gICAgeyBpZDogJ2hlbGxvLW5leHRqcycsIHRpdGxlOiAnSGVsbG8gTmV4dC5qcyd9LFxuICAgIHsgaWQ6ICdsZWFybi1uZXh0anMnLCB0aXRsZTogJ0xlYXJuIE5leHQuanMgaXMgYXdlc29tZSd9LFxuICAgIHsgaWQ6ICdkZXBsb3ktbmV4dGpzJywgdGl0bGU6ICdEZXBsb3kgYXBwcyB3aXRoIFpFSVQnfSxcbiAgXVxufVxuXG5jb25zdCBQb3N0TGluayA9ICh7IHBvc3QgfSkgPT4gKFxuICA8bGk+XG4gICAgPExpbmsgYXM9e2AvcC8ke3Bvc3QuaWR9YH0gaHJlZj17YC9wb3N0P3RpdGxlPSR7cG9zdC50aXRsZX1gfT5cbiAgICAgIDxhPntwb3N0LnRpdGxlfTwvYT5cbiAgICA8L0xpbms+XG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgbGkge1xuICAgICAgICBsaXN0LXN0eWxlOiBub25lO1xuICAgICAgICBtYXJnaW46IDVweCAwO1xuICAgICAgfVxuXG4gICAgICBhIHtcbiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgICAgICBjb2xvcjogYmx1ZTtcbiAgICAgICAgZm9udC1mYW1pbHk6IFwiQXJpYWxcIjtcbiAgICAgIH1cblxuICAgICAgYTpob3ZlciB7XG4gICAgICAgIG9wYWNpdHk6IDAuNjtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvbGk+XG4pXG5cbmV4cG9ydCBkZWZhdWx0ICgpID0+IChcbiAgPExheW91dD5cbiAgICA8aDE+TXkgQmxvZzwvaDE+XG4gICAgPHVsPlxuICAgICAge2dldFBvc3RzKCkubWFwKChwb3N0KSA9PiAoXG4gICAgICAgIDxQb3N0TGluayBrZXk9e3Bvc3QuaWR9IHBvc3Q9e3Bvc3R9Lz5cbiAgICAgICkpfVxuICAgIDwvdWw+XG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgaDEsIGEge1xuICAgICAgICBmb250LWZhbWlseTogXCJBcmlhbFwiO1xuICAgICAgfVxuXG4gICAgICB1bCB7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICB9XG5cbiAgICAgIGxpIHtcbiAgICAgICAgbGlzdC1zdHlsZTogbm9uZTtcbiAgICAgICAgbWFyZ2luOiA1cHggMDtcbiAgICAgIH1cblxuICAgICAgYSB7XG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgY29sb3I6IGJsdWU7XG4gICAgICB9XG5cbiAgICAgIGE6aG92ZXIge1xuICAgICAgICBvcGFjaXR5OiAwLjY7XG4gICAgICB9XG4gICAgYH08L3N0eWxlPlxuICA8L0xheW91dD5cbikiXX0= */\n/*@ sourceURL=/Users/reuters/Engineering/Playground/hello-next/pages/index.js */"
   }));
-};
-
-Index.getInitialProps =
-/*#__PURE__*/
-_asyncToGenerator(
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var res, data;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()('https://api.tvmaze.com/search/shows?q=batman');
-
-        case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return res.json();
-
-        case 5:
-          data = _context.sent;
-          console.log("Show data fetched. Count: ".concat(data.length));
-          return _context.abrupt("return", {
-            shows: data
-          });
-
-        case 8:
-        case "end":
-          return _context.stop();
-      }
-    }
-  }, _callee, this);
-}));
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+});
 
 /***/ }),
 
@@ -307,28 +273,6 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
 
 module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
-
-/***/ }),
-
-/***/ "@babel/runtime/regenerator":
-/*!*********************************************!*\
-  !*** external "@babel/runtime/regenerator" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/regenerator");
-
-/***/ }),
-
-/***/ "isomorphic-unfetch":
-/*!*************************************!*\
-  !*** external "isomorphic-unfetch" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 
